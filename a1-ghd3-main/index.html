@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+    </head>
+<body>
+
+<h1>Results Overview</h1>
+<p>This project extends the part of our A3 experiment where we evaluate how accurately perceive the median of the underlying dataset of a histogram. For this experiment, we have 5 different types of visualizations: histograms, density plots, scatter plots, beeswarm plots, and bar charts. The overarching goal of our experiment here was to determine how different graphs may impact users' ability to accurately find the median of the underlying dataset being visualized. It should be noted that for the sake of simplifying both our experiment and the task presented to users, if the elements of datasets we made both had x-coordinate values and y-coordinate values, the users only had to find the median of the x-coordinate values of the dataset.</p>
+
+<h1>Visualizations Tested</h1>
+<p>This experiment tested the following visualization types:</p>
+
+<ul>
+  <li><strong>Histograms</strong></li>
+  <li><strong>Density Plots</strong></li>
+  <li><strong>Scatter Plots</strong></li>
+  <li><strong>Beeswarm Plots</strong></li>
+  <li><strong>Bar Charts</strong></li>
+</ul>
+
+<h1>Results Summary</h1>
+<p>The table below shows the average error calculations for each of our visualizations. For all of the different charts, the original error metric calculated was the absolute difference between the true median x-coordinate value of the graphs' underlying dataset and the x-coordinate value of the graphs' underlying dataset that was selected by the user. However, we later found out that calculating the errors for each of our calculations this was was insufficient due to the range of the x-coordinate values of the graphs' underlying datasets being different. To address this issue, we normalized all of the obtained error calculations throughout our experiment by dividing all of them by the difference between the maximum and minimum x-coordinate values of their corresponding graphs' underlying datasets. Therefore, the final formula used for calculating the error calculations throughout the entire experiment was:</p>
+
+<img src="error_calculation_formula.png" alt="Formula for Error Calculation" width="1200"/>
+
+<p>Once all of the normalized error calculations were calculated, we then grouped them all by their corresponding vsiaulization. After doing so, we were able to calculate the average error for each visualization by summing up all their corresponding normalized errors and then dividing the total by the number of trials conducted for that particular visualization. The formula representing this calculation for each visualization is:</p> 
+
+
+<img src="average_error_calculation.png" alt="Formula for Average Error Calculation" width="500"/>
+
+<table>
+  <tr>
+    <th>Visualization</th>
+    <th>Error</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
