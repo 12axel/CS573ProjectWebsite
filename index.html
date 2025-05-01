@@ -24,6 +24,30 @@
         height: 100vh;
         padding: 5vh 5vw;
       }
+      .study-button {
+        /* CSS styles for this button taken from https://copy-paste-css.com/ */
+        display: inline-block;
+        outline: 0;
+        cursor: pointer;
+        border: none;
+        padding: 0 56px;
+        height: 45px;
+        line-height: 45px;
+        border-radius: 7px;
+        background-color: #0070f3;
+        color: white;
+        font-weight: 400;
+        font-size: 16px;
+        box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+        transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+        :hover {
+          background: rgba(0, 118, 255, 0.9);
+          box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+        }
+      }
+      a {
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
@@ -52,7 +76,12 @@
         <li><strong>Bar Charts</strong></li>
       </ul>
       <h1>Study made using ReVISit</h1>
-      <a href="./study.html">See our study here</a>
+      <a
+        class="study-button"
+        href="https://mahirsowad3.github.io/CS573-grad-final-project/"
+        target="_blank"
+        >See our study here</a
+      >
       <h1>Results Summary</h1>
       <p>
         The table below shows the average error calculations for each of our
