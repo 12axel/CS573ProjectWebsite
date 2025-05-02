@@ -91,7 +91,7 @@
           href="https://docs.google.com/document/d/e/2PACX-1vTZiNqBpdFNpeJGXxk2PzJyNIHLlUCbMOG3koZ16vqfXZ1bgVI2zL3zkqiVZsUgCu7dh3JeZ_eIebjo/pub"
           target="_blank"
         >
-          View the Process Book in a new tab
+          View the Process Book in a New Tab
         </a>
       </div>
       <h1>Study made using ReVISit</h1>
@@ -122,16 +122,23 @@
         visualizations. For all of the different charts, the original error
         metric calculated was the absolute difference between the true median
         x-coordinate value of the graphs' underlying dataset and the
-        x-coordinate value of the graphs' underlying dataset that was selected
-        by the user. However, we later found out that calculating the errors for
-        each of our calculations this was was insufficient due to the range of
-        the x-coordinate values of the graphs' underlying datasets being
-        different. To address this issue, we normalized all of the obtained
-        error calculations throughout our experiment by dividing all of them by
-        the difference between the maximum and minimum x-coordinate values of
-        their corresponding graphs' underlying datasets. Therefore, the final
-        formula used for calculating the error calculations throughout the
-        entire experiment was:
+        user-selected x-coordinate value of the graphs' underlying dataset.
+        However, during the error calculation, we ran into difficulties
+        comparing the absolute errors of the raw values of the graphs. This is
+        due to the fact that during the data generation process for the
+        underlying datasets, different ranges / scales across different graph
+        types were utilized to create the most appropriate datasets for each
+        graph type. This made comparison of the raw absolute errors between
+        graph types difficult because the absolute error for one graph type
+        could be greater in terms of magnitude than the absolute error of a
+        different graph type, but in terms of percentage error, the error may
+        not be as significant as the raw magnitude would have one believe. To
+        address this issue, we normalized all of the obtained error calculations
+        throughout our experiment by dividing all of them by the difference
+        between the maximum and minimum x-coordinate values of their
+        corresponding graphs' underlying datasets. Therefore, the final formula
+        used for calculating the error calculations throughout the entire
+        experiment was:
       </p>
       <img
         src="error_calculation_formula.png"
